@@ -1,0 +1,610 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Forms</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-[#f0f0f7] text-[#4a4a4a] min-h-screen flex flex-col">
+  <div class="flex flex-col md:flex-row min-h-screen">
+    <!-- Sidebar -->
+    <aside class="bg-[#7c4dff] w-full md:w-56 flex flex-col text-white">
+      <div class="flex items-center justify-between px-5 py-4 border-b border-purple-300">
+        <h1 class="font-semibold text-lg">Forms</h1>
+        <button aria-label="Close sidebar" class="text-white text-xl md:hidden">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <nav class="flex-1 overflow-y-auto px-5 py-6 space-y-6 text-sm">
+        <div>
+          <h2 class="uppercase font-semibold text-xs mb-3 opacity-70">Main Menu</h2>
+          <ul class="space-y-3">
+            <li class="flex items-center space-x-3 opacity-70 hover:opacity-100 cursor-pointer">
+              <i class="fas fa-tachometer-alt text-sm w-4"></i>
+              <span>Dashboards</span>
+            </li>
+            <li class="flex items-center space-x-3 opacity-70 hover:opacity-100 cursor-pointer">
+              <i class="fas fa-columns text-sm w-4"></i>
+              <span>Layouts</span>
+            </li>
+            <li class="flex items-center space-x-3 opacity-70 hover:opacity-100 cursor-pointer">
+              <i class="fas fa-envelope text-sm w-4"></i>
+              <span>Mailbox</span>
+            </li>
+            <li class="flex items-center space-x-3 opacity-70 hover:opacity-100 cursor-pointer">
+              <i class="fas fa-shopping-cart text-sm w-4"></i>
+              <span>Ecommerce</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="uppercase font-semibold text-xs mb-3 opacity-70">Apps</h2>
+          <ul class="space-y-3">
+            <li class="flex items-center space-x-3 opacity-70 hover:opacity-100 cursor-pointer">
+              <i class="fas fa-calendar-alt text-sm w-4"></i>
+              <span>Calendar</span>
+            </li>
+            <li class="flex items-center space-x-3 opacity-70 hover:opacity-100 cursor-pointer">
+              <i class="fas fa-comments text-sm w-4"></i>
+              <span>Messenger</span>
+            </li>
+            <li class="flex items-center space-x-3 opacity-70 hover:opacity-100 cursor-pointer">
+              <i class="fas fa-comments-alt text-sm w-4"></i>
+              <span>Contacts</span>
+            </li>
+            <li class="flex items-center space-x-3 opacity-70 hover:opacity-100 cursor-pointer">
+              <i class="fas fa-folder text-sm w-4"></i>
+              <span>File Manager</span>
+            </li>
+            <li class="flex items-center space-x-3 opacity-70 hover:opacity-100 cursor-pointer">
+              <i class="fas fa-check-square text-sm w-4"></i>
+              <span>To-Do</span>
+            </li>
+            <li class="flex items-center space-x-3 opacity-70 hover:opacity-100 cursor-pointer">
+              <i class="fas fa-newspaper text-sm w-4"></i>
+              <span>News Feed</span>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="flex-1 flex flex-col">
+      <!-- Header -->
+      <header class="bg-[#e6e6f0] px-5 py-3 flex flex-col sm:flex-row justify-between items-center text-xs text-[#7a7a9d]">
+        <h2 class="font-semibold mb-1 sm:mb-0">Basic Forms</h2>
+        <nav class="flex space-x-1">
+          <a href="#" class="hover:underline">Home</a>
+          <span>&gt;</span>
+          <a href="#" class="hover:underline">Forms</a>
+          <span>&gt;</span>
+          <span>Basic Forms</span>
+        </nav>
+      </header>
+
+      <section class="p-5 space-y-5 flex-1 overflow-y-auto">
+        <!-- Basic Forms and Horizontal Forms -->
+        <div class="flex flex-col lg:flex-row gap-5">
+          <section class="bg-white rounded shadow p-5 flex-1 max-w-full lg:max-w-[48%]">
+            <h3 class="text-sm font-semibold mb-4">Basic Forms</h3>
+            <form class="space-y-3 text-xs text-[#7a7a9d]">
+              <label class="block">
+                <span class="block font-semibold text-[#4a4a4a] mb-1">Email Address*</span>
+                <input
+                  type="email"
+                  placeholder="someone@example.com"
+                  class="w-full border border-[#ddd] rounded px-2 py-1 text-xs text-[#4a4a4a]"
+                />
+              </label>
+              <label class="block">
+                <span class="block font-semibold text-[#4a4a4a] mb-1">Password*</span>
+                <input
+                  type="password"
+                  placeholder=""
+                  class="w-full border border-[#ddd] rounded px-2 py-1 text-xs text-[#4a4a4a]"
+                />
+              </label>
+              <label class="inline-flex items-center space-x-2 text-xs text-[#7a7a9d]">
+                <input type="checkbox" class="form-checkbox" />
+                <span>Check Me Out</span>
+              </label>
+              <div class="flex space-x-3 mt-3">
+                <button
+                  type="submit"
+                  class="bg-[#7c4dff] text-white text-xs px-4 py-1 rounded"
+                >
+                  Submit
+                </button>
+                <button
+                  type="button"
+                  class="border border-[#ddd] text-xs px-4 py-1 rounded text-[#4a4a4a]"
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </section>
+
+          <section class="bg-white rounded shadow p-5 flex-1 max-w-full lg:max-w-[48%]">
+            <h3 class="text-sm font-semibold mb-4">Horizontal Forms</h3>
+            <form class="text-xs text-[#7a7a9d] space-y-3">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-3">
+                <label class="w-full sm:w-1/3 font-semibold text-[#4a4a4a] mb-1 sm:mb-0" for="emailH">
+                  Email Address*
+                </label>
+                <input
+                  id="emailH"
+                  type="email"
+                  placeholder="someone@example.com"
+                  class="w-full sm:w-2/3 border border-[#ddd] rounded px-2 py-1 text-xs text-[#4a4a4a]"
+                />
+              </div>
+              <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-3">
+                <label class="w-full sm:w-1/3 font-semibold text-[#4a4a4a] mb-1 sm:mb-0" for="passwordH">
+                  Password*
+                </label>
+                <div class="w-full sm:w-2/3 flex flex-col space-y-1">
+                  <input
+                    id="passwordH"
+                    type="password"
+                    placeholder="Enter your password here"
+                    class="border border-[#ddd] rounded px-2 py-1 text-xs text-[#4a4a4a]"
+                  />
+                  <label class="inline-flex items-center space-x-2 text-xs text-[#7a7a9d]">
+                    <input type="checkbox" class="form-checkbox" />
+                    <span>Remember Me</span>
+                  </label>
+                </div>
+              </div>
+              <div class="flex justify-end">
+                <button
+                  type="submit"
+                  class="bg-[#7c4dff] text-white text-xs px-4 py-1 rounded"
+                >
+                  Sign In
+                </button>
+              </div>
+            </form>
+          </section>
+        </div>
+
+        <!-- Inline Forms -->
+        <section class="bg-white rounded shadow p-5 text-xs text-[#7a7a9d]">
+          <form class="flex flex-col sm:flex-row sm:items-center sm:space-x-3 space-y-3 sm:space-y-0">
+            <input
+              type="email"
+              placeholder="Email Address"
+              class="flex-1 border border-[#ddd] rounded px-2 py-1 text-xs text-[#4a4a4a]"
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              class="flex-1 border border-[#ddd] rounded px-2 py-1 text-xs text-[#4a4a4a]"
+            />
+            <label class="inline-flex items-center space-x-2 text-xs text-[#7a7a9d] whitespace-nowrap">
+              <input type="checkbox" class="form-checkbox" />
+              <span>Remember Me</span>
+            </label>
+            <button
+              type="submit"
+              class="bg-[#7c4dff] text-white text-xs px-4 py-1 rounded whitespace-nowrap"
+            >
+              Submit
+            </button>
+          </form>
+        </section>
+
+        <!-- Basic Inputs and Input Groups -->
+        <div class="flex flex-col lg:flex-row gap-5">
+          <section class="bg-white rounded shadow p-5 flex-1 max-w-full lg:max-w-[48%] text-xs text-[#7a7a9d]">
+            <h3 class="font-semibold mb-4 text-sm text-[#4a4a4a]">Basic Inputs</h3>
+            <form class="space-y-3">
+              <label class="block">
+                <span class="block mb-1 font-semibold text-[#4a4a4a]">Basic Input</span>
+                <input
+                  type="text"
+                  class="w-full border border-[#ddd] rounded px-2 py-1 text-xs text-[#4a4a4a]"
+                />
+              </label>
+              <label class="block">
+                <span class="block mb-1 font-semibold text-[#4a4a4a]">Placeholder</span>
+                <input
+                  type="text"
+                  placeholder="Your title is placeholder"
+                  class="w-full border border-[#ddd] rounded px-2 py-1 text-xs text-[#4a4a4a]"
+                />
+              </label>
+              <label class="block">
+                <span class="block mb-1 font-semibold text-[#4a4a4a]">Password</span>
+                <input
+                  type="password"
+                  placeholder="Password input"
+                  class="w-full border border-[#ddd] rounded px-2 py-1 text-xs text-[#4a4a4a]"
+                />
+              </label>
+              <label class="block">
+                <span class="block mb-1 font-semibold text-[#4a4a4a]">Read Only</span>
+                <input
+                  type="text"
+                  value="You can't change me"
+                  readonly
+                  class="w-full border border-[#ddd] rounded px-2 py-1 text-xs bg-[#e6e6f0] text-[#4a4a4a]"
+                />
+              </label>
+              <label class="block">
+                <span class="block mb-1 font-semibold text-[#4a4a4a]">Disable Input</span>
+                <input
+                  type="text"
+                  value="Disabled text"
+                  disabled
+                  class="w-full border border-[#ddd] rounded px-2 py-1 text-xs bg-[#e6e6f0] text-[#4a4a4a]"
+                />
+              </label>
+              <label class="block">
+                <span class="block mb-1 font-semibold text-[#4a4a4a]">Select Box</span>
+                <select
+                  class="w-full border border-[#ddd] rounded px-2 py-1 text-xs text-[#4a4a4a]"
+                >
+                  <option selected disabled>Select one value Only</option>
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </label>
+              <label class="block">
+                <span class="block mb-1 font-semibold text-[#4a4a4a]">Round Input</span>
+                <input
+                  type="text"
+                  placeholder="Enter a round input"
+                  class="w-full border border-[#ddd] rounded-full px-2 py-1 text-xs text-[#4a4a4a]"
+                />
+              </label>
+              <label class="block">
+                <span class="block mb-1 font-semibold text-[#4a4a4a]">Maximum Length</span>
+                <input
+                  type="text"
+                  maxlength="10"
+                  placeholder="Cannot more 10 characters"
+                  class="w-full border border-[#ddd] rounded px-2 py-1 text-xs text-[#4a4a4a]"
+                />
+              </label>
+              <label class="block">
+                <span class="block mb-1 font-semibold text-[#4a4a4a]">Static Text</span>
+                <input
+                  type="text"
+                  value="some@gmail.com"
+                  readonly
+                  class="w-full border border-[#ddd] rounded px-2 py-1 text-xs bg-[#e6e6f0] text-[#4a4a4a]"
+                />
+              </label>
+              <label class="block">
+                <span class="block mb-1 font-semibold text-[#4a4a4a]">Color</span>
+                <input
+                  type="color"
+                  value="#4a4a4a"
+                  class="w-full h-6 border border-[#ddd] rounded px-2 py-1 text-xs"
+                />
+              </label>
+              <label class="block">
+                <span class="block mb-1 font-semibold text-[#4a4a4a]">Upload File</span>
+                <input
+                  type="file"
+                  class="w-full border border-[#ddd] rounded px-2 py-1 text-xs text-[#4a4a4a]"
+                />
+              </label>
+              <label class="block">
+                <span class="block mb-1 font-semibold text-[#4a4a4a]">Textarea</span>
+                <textarea
+                  rows="3"
+                  class="w-full border border-[#ddd] rounded px-2 py-1 text-xs text-[#4a4a4a]"
+                >Textarea</textarea>
+              </label>
+            </form>
+          </section>
+
+          <section class="bg-white rounded shadow p-5 flex-1 max-w-full lg:max-w-[48%] text-xs text-[#7a7a9d]">
+            <h3 class="font-semibold mb-4 text-sm text-[#4a4a4a]">Input Groups</h3>
+            <form class="space-y-4">
+              <div>
+                <label class="block mb-1 font-semibold text-[#4a4a4a]">Input Groups</label>
+                <div class="flex space-x-2">
+                  <input
+                    type="text"
+                    placeholder="Username"
+                    class="flex-1 border border-[#ddd] rounded px-2 py-1 text-xs text-[#4a4a4a]"
+                  />
+                  <input
+                    type="text"
+                    placeholder="200"
+                    class="w-20 border border-[#ddd] rounded px-2 py-1 text-xs text-[#4a4a4a]"
+                  />
+                </div>
+              </div>
+              <div>
+                <label class="block mb-1 font-semibold text-[#4a4a4a]">Input Groups</label>
+                <div class="space-y-1">
+                  <div class="flex space-x-2">
+                    <span class="inline-flex items-center px-2 border border-[#ddd] rounded bg-[#f0f0f7] text-xs text-[#7a7a9d]">
+                      <i class="fas fa-user"></i>
+                    </span>
+                    <input
+                      type="text"
+                      placeholder="Username"
+                      class="flex-1 border border-[#ddd] rounded px-2 py-1 text-xs text-[#4a4a4a]"
+                    />
+                  </div>
+                  <div class="flex space-x-2">
+                    <span class="inline-flex items-center px-2 border border-[#ddd] rounded bg-[#f0f0f7] text-xs text-[#7a7a9d]">
+                      <i class="fas fa-user"></i>
+                    </span>
+                    <input
+                      type="text"
+                      placeholder="Username"
+                      class="flex-1 border border-[#ddd] rounded px-2 py-1 text-xs text-[#4a4a4a]"
+                    />
+                  </div>
+                  <div class="flex space-x-2">
+                    <span class="inline-flex items-center px-2 border border-[#ddd] rounded bg-[#f0f0f7] text-xs text-[#7a7a9d]">
+                      <i class="fas fa-user"></i>
+                    </span>
+                    <input
+                      type="text"
+                      placeholder="Username"
+                      class="flex-1 border border-[#ddd] rounded px-2 py-1 text-xs text-[#4a4a4a]"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center space-x-2">
+                <label class="font-semibold text-[#4a4a4a] w-24">Checkboxes</label>
+                <input type="checkbox" class="form-checkbox" />
+              </div>
+              <div class="flex items-center space-x-2">
+                <label class="font-semibold text-[#4a4a4a] w-24">Radio</label>
+                <input type="radio" class="form-radio" />
+              </div>
+              <div class="space-y-2">
+                <label class="font-semibold text-[#4a4a4a] block">Button Addons</label>
+                <div class="flex space-x-2">
+                  <button
+                    type="button"
+                    class="bg-[#7c4dff] text-white text-xs px-3 py-1 rounded"
+                  >
+                    Go
+                  </button>
+                  <input
+                    type="text"
+                    class="flex-1 border border-[#ddd] rounded px-2 py-1 text-xs text-[#4a4a4a]"
+                  />
+                  <button
+                    type="button"
+                    class="bg-[#7c4dff] text-white text-xs px-3 py-1 rounded"
+                  >
+                    Go
+                  </button>
+                </div>
+                <input
+                  type="text"
+                  class="w-full border border-[#ddd] rounded px-2 py-1 text-xs text-[#4a4a4a]"
+                />
+                <button
+                  type="button"
+                  class="bg-[#4caf50] text-white text-xs px-3 py-1 rounded mr-2"
+                >
+                  Act on
+                </button>
+                <button
+                  type="button"
+                  class="bg-[#f44336] text-white text-xs px-3 py-1 rounded"
+                >
+                  Active
+                </button>
+              </div>
+            </form>
+          </section>
+        </div>
+
+        <!-- Input Validation -->
+        <section class="bg-white rounded shadow p-5 text-xs space-y-3">
+          <h3 class="font-semibold text-sm text-[#4a4a4a]">Input Validation</h3>
+          <form class="space-y-3">
+            <div>
+              <label class="block font-semibold text-[#4caf50] mb-1">Input with Success</label>
+              <input
+                type="text"
+                class="w-full border border-[#4caf50] rounded px-2 py-1 text-xs text-[#4a4a4a]"
+              />
+              <p class="text-[#4caf50] text-xs mt-1">Success! you are done it.</p>
+            </div>
+            <div>
+              <label class="block font-semibold text-[#ffeb3b] mb-1">Input with Warning</label>
+              <input
+                type="text"
+                class="w-full border border-[#ffeb3b] rounded px-2 py-1 text-xs text-[#4a4a4a]"
+              />
+              <p class="text-[#ffeb3b] text-xs mt-1">Help block with warning</p>
+            </div>
+            <div>
+              <label class="block font-semibold text-[#f44336] mb-1">Input with Danger</label>
+              <input
+                type="text"
+                class="w-full border border-[#f44336] rounded px-2 py-1 text-xs text-[#4a4a4a]"
+              />
+              <p class="text-[#f44336] text-xs mt-1">Help block with warning</p>
+            </div>
+          </form>
+        </section>
+
+        <!-- Check Boxes and Radio Boxes -->
+        <div class="flex flex-col lg:flex-row gap-5">
+          <section class="bg-white rounded shadow p-5 flex-1 max-w-full lg:max-w-[48%] text-xs text-[#7a7a9d]">
+            <h3 class="font-semibold mb-4 text-sm text-[#4a4a4a]">Check Boxes</h3>
+            <form class="space-y-2">
+              <label class="inline-flex items-center space-x-2">
+                <input type="checkbox" class="form-checkbox" />
+                <span>Unchecked</span>
+              </label>
+              <label class="inline-flex items-center space-x-2">
+                <input type="checkbox" class="form-checkbox" checked />
+                <span>Checked</span>
+              </label>
+              <label class="inline-flex items-center space-x-2">
+                <input type="checkbox" class="form-checkbox" checked disabled />
+                <span>Disabled & Checked</span>
+              </label>
+              <label class="inline-flex items-center space-x-2">
+                <input type="checkbox" class="form-checkbox" disabled />
+                <span>Disabled & Unchecked</span>
+              </label>
+            </form>
+          </section>
+
+          <section class="bg-white rounded shadow p-5 flex-1 max-w-full lg:max-w-[48%] text-xs text-[#7a7a9d]">
+            <h3 class="font-semibold mb-4 text-sm text-[#4a4a4a]">Radio Boxes</h3>
+            <form class="space-y-2">
+              <label class="inline-flex items-center space-x-2">
+                <input type="radio" class="form-radio" name="radioGroup" />
+                <span>Unchecked</span>
+              </label>
+              <label class="inline-flex items-center space-x-2">
+                <input type="radio" class="form-radio" name="radioGroup" checked />
+                <span>Selected</span>
+              </label>
+              <label class="inline-flex items-center space-x-2">
+                <input type="radio" class="form-radio" name="radioGroup" disabled />
+                <span>Disabled & Unchecked</span>
+              </label>
+              <label class="inline-flex items-center space-x-2">
+                <input type="radio" class="form-radio" name="radioGroup" checked disabled />
+                <span>Disabled & Selected</span>
+              </label>
+            </form>
+          </section>
+        </div>
+
+        <!-- Vertical form with icon and Horizontal Forms -->
+        <div class="flex flex-col lg:flex-row gap-5">
+          <section class="bg-white rounded shadow p-5 flex-1 max-w-full lg:max-w-[48%] text-xs text-[#7a7a9d]">
+            <h3 class="font-semibold mb-4 text-sm text-[#4a4a4a]">Vertical from with icon</h3>
+            <form class="space-y-3">
+              <label class="block">
+                <span class="block mb-1 font-semibold text-[#4a4a4a]">User Name*</span>
+                <div class="relative">
+                  <span
+                    class="absolute inset-y-0 left-2 flex items-center text-[#7a7a9d] text-xs"
+                    ><i class="fas fa-user"></i
+                  ></span>
+                  <input
+                    type="text"
+                    placeholder="User Name"
+                    class="w-full border border-[#ddd] rounded px-8 py-1 text-xs text-[#4a4a4a]"
+                  />
+                </div>
+              </label>
+              <label class="block">
+                <span class="block mb-1 font-semibold text-[#4a4a4a]">Password*</span>
+                <div class="relative">
+                  <span
+                    class="absolute inset-y-0 left-2 flex items-center text-[#7a7a9d] text-xs"
+                    ><i class="fas fa-lock"></i
+                  ></span>
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    class="w-full border border-[#ddd] rounded px-8 py-1 text-xs text-[#4a4a4a]"
+                  />
+                </div>
+              </label>
+              <label class="inline-flex items-center space-x-2 text-xs text-[#7a7a9d]">
+                <input type="checkbox" class="form-checkbox" />
+                <span>Remember Me</span>
+              </label>
+              <div class="flex space-x-3 mt-3">
+                <button
+                  type="submit"
+                  class="bg-[#7c4dff] text-white text-xs px-4 py-1 rounded"
+                >
+                  Submit
+                </button>
+                <button
+                  type="button"
+                  class="border border-[#ddd] text-xs px-4 py-1 rounded text-[#4a4a4a]"
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </section>
+
+          <section class="bg-white rounded shadow p-5 flex-1 max-w-full lg:max-w-[48%] text-xs text-[#7a7a9d]">
+            <h3 class="font-semibold mb-4 text-sm text-[#4a4a4a]">Horizontal Forms</h3>
+            <form class="space-y-3">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-3">
+                <label class="w-full sm:w-1/3 font-semibold text-[#4a4a4a] mb-1 sm:mb-0" for="userH">
+                  User Name*
+                </label>
+                <div class="relative w-full sm:w-2/3">
+                  <span
+                    class="absolute inset-y-0 left-2 flex items-center text-[#7a7a9d] text-xs"
+                    ><i class="fas fa-user"></i
+                  ></span>
+                  <input
+                    id="userH"
+                    type="text"
+                    placeholder="User Name"
+                    class="w-full border border-[#ddd] rounded px-8 py-1 text-xs text-[#4a4a4a]"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-3">
+                <label class="w-full sm:w-1/3 font-semibold text-[#4a4a4a] mb-1 sm:mb-0" for="passH">
+                  Password*
+                </label>
+                <div class="relative w-full sm:w-2/3 flex flex-col space-y-1">
+                  <input
+                    id="passH"
+                    type="password"
+                    placeholder="Password"
+                    class="border border-[#ddd] rounded px-8 py-1 text-xs text-[#4a4a4a]"
+                  />
+                  <label class="inline-flex items-center space-x-2 text-xs text-[#7a7a9d]">
+                    <input type="checkbox" class="form-checkbox" />
+                    <span>Remember Me</span>
+                  </label>
+                </div>
+              </div>
+              <div class="flex justify-end">
+                <button
+                  type="submit"
+                  class="bg-[#7c4dff] text-white text-xs px-4 py-1 rounded"
+                >
+                  Sign In
+                </button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-[#f0f0f7] text-center text-xs text-[#7a7a9d] py-3 border-t border-[#ddd]">
+        2021 Copyright © ShaplaNews
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
